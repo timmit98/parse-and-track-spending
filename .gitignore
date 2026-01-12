@@ -35,6 +35,7 @@ ARCHITECTURE.md
 architecture.md
 CLAUDE.md
 .claude/
+.planning-with-files/
 
 # Personal data - keep local only
 src/utils/category-config.json

@@ -9,13 +9,10 @@ function UploadSection({
   handleFileUpload,
   handleClearData
 }) {
-  const [showAmexHelp, setShowAmexHelp] = useState(false)
-  const [showAppleHelp, setShowAppleHelp] = useState(false)
+  const [showAsbHelp, setShowAsbHelp] = useState(false)
 
-  const handleOpenAmexHelp = useCallback(() => setShowAmexHelp(true), [])
-  const handleCloseAmexHelp = useCallback(() => setShowAmexHelp(false), [])
-  const handleOpenAppleHelp = useCallback(() => setShowAppleHelp(true), [])
-  const handleCloseAppleHelp = useCallback(() => setShowAppleHelp(false), [])
+  const handleOpenAsbHelp = useCallback(() => setShowAsbHelp(true), [])
+  const handleCloseAsbHelp = useCallback(() => setShowAsbHelp(false), [])
 
   return (
     <section className="upload-section">
@@ -42,47 +39,23 @@ function UploadSection({
       </div>
 
       <div className="upload-note-row">
-        <p className="upload-note">{UPLOAD_LABELS.amexNote}</p>
+        <p className="upload-note">{UPLOAD_LABELS.asbNote}</p>
         <button
           type="button"
           className="info-btn"
-          onClick={handleOpenAmexHelp}
-          aria-label={UPLOAD_LABELS.amexAriaLabel}
+          onClick={handleOpenAsbHelp}
+          aria-label={UPLOAD_LABELS.asbAriaLabel}
           aria-haspopup="dialog"
         >
           <span aria-hidden="true">i</span>
         </button>
       </div>
 
-      <div className="upload-note-row">
-        <p className="upload-note">{UPLOAD_LABELS.appleNote}</p>
-        <button
-          type="button"
-          className="info-btn"
-          onClick={handleOpenAppleHelp}
-          aria-label={UPLOAD_LABELS.appleAriaLabel}
-          aria-haspopup="dialog"
-        >
-          <span aria-hidden="true">i</span>
-        </button>
-      </div>
-
-      <div className="upload-note-row">
-        <p className="upload-note">{UPLOAD_LABELS.usbankNote}</p>
-      </div>
-
       <InstructionModal
-        isOpen={showAmexHelp}
-        onClose={handleCloseAmexHelp}
-        title={HELP_CONTENT.amex.title}
-        steps={HELP_CONTENT.amex.steps}
-      />
-
-      <InstructionModal
-        isOpen={showAppleHelp}
-        onClose={handleCloseAppleHelp}
-        title={HELP_CONTENT.apple.title}
-        steps={HELP_CONTENT.apple.steps}
+        isOpen={showAsbHelp}
+        onClose={handleCloseAsbHelp}
+        title={HELP_CONTENT.asb.title}
+        steps={HELP_CONTENT.asb.steps}
       />
 
       {message.text && (

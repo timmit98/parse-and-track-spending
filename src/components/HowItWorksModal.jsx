@@ -135,10 +135,11 @@ function HowItWorksModal({ isOpen, onClose }) {
             <section>
               <h4>Supported Banks</h4>
               <ul className="bank-list">
-                <li>American Express (CSV and PDF)</li>
-                <li>Chase (CSV)</li>
-                <li>Capital One (CSV)</li>
+                <li>ASB Bank - New Zealand (PDF) - Coming soon in Phase 3</li>
               </ul>
+              <p className="note">
+                <em>Note: This app is being converted to support New Zealand banks only. US bank support has been removed.</em>
+              </p>
             </section>
 
             <section>
